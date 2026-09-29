@@ -7,239 +7,11 @@
 
     <title>Mohammed Awuf | Personal Website</title>
 
-    <style>
-
-        * {
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: linear-gradient(135deg, #eaf2ff, #f7f9fc);
-            color: #333333;
-            line-height: 1.6;
-        }
-
-        /* HEADER */
-
-        header {
-            background: linear-gradient(135deg, #102a43, #1f5f99);
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-        }
-
-        /* JPG LOGO */
-
-        .logo {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid white;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s;
-        }
-
-        .logo:hover {
-            transform: scale(1.08);
-        }
-
-        h1 {
-            font-size: 38px;
-            margin: 15px 0 5px;
-        }
-
-        header p {
-            font-size: 18px;
-            margin: 0;
-        }
-
-        /* NAVIGATION */
-
-        nav {
-            background-color: #0b1f33;
-            text-align: center;
-            padding: 15px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #74b9ff;
-        }
-
-        /* SECTIONS */
-
-        section {
-            width: 80%;
-            max-width: 900px;
-            background-color: white;
-            margin: 30px auto;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-        }
-
-        h2 {
-            color: #17365d;
-            border-bottom: 2px solid #74b9ff;
-            padding-bottom: 8px;
-        }
-
-        .intro {
-            font-size: 18px;
-            font-style: italic;
-            color: #444444;
-        }
-
-        /* GRAPHIC */
-
-        .computer-graphic {
-            width: 280px;
-            margin: 30px auto;
-            text-align: center;
-            transition: transform 0.4s;
-        }
-
-        .computer-graphic:hover {
-            transform: scale(1.07);
-        }
-
-        .monitor {
-            width: 280px;
-            height: 170px;
-            background-color: #172b4d;
-            border: 10px solid #333333;
-            border-radius: 10px;
-            padding: 25px 15px;
-            color: #74b9ff;
-            font-family: "Courier New", monospace;
-            font-size: 17px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
-        }
-
-        .stand {
-            width: 25px;
-            height: 40px;
-            background-color: #444444;
-            margin: auto;
-        }
-
-        .base {
-            width: 110px;
-            height: 15px;
-            background-color: #444444;
-            margin: auto;
-            border-radius: 5px;
-        }
-
-        /* SKILLS */
-
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .skill {
-            background-color: #17365d;
-            color: white;
-            padding: 10px 18px;
-            border-radius: 20px;
-            transition: all 0.3s;
-        }
-
-        .skill:hover {
-            background-color: #74b9ff;
-            color: #102a43;
-            transform: translateY(-4px);
-        }
-
-        /* FOOTER */
-
-        footer {
-            background-color: #102a43;
-            color: white;
-            text-align: center;
-            padding: 25px;
-            margin-top: 40px;
-        }
-
-        footer a {
-            color: #74b9ff;
-            text-decoration: none;
-            margin: 0 12px;
-            font-weight: bold;
-        }
-
-        footer a:hover {
-            color: white;
-            text-decoration: underline;
-        }
-
-        /* CUSTOM CURSOR */
-
-        .custom-cursor {
-            width: 22px;
-            height: 22px;
-            border: 2px solid #1687ff;
-            border-radius: 50%;
-            position: fixed;
-            pointer-events: none;
-            transform: translate(-50%, -50%);
-            z-index: 9999;
-        }
-
-        /* PHONE/TABLET */
-
-        @media (max-width: 600px) {
-
-            h1 {
-                font-size: 28px;
-            }
-
-            section {
-                width: 92%;
-                padding: 20px;
-            }
-
-            nav a {
-                display: inline-block;
-                margin: 5px 8px;
-            }
-
-            .logo {
-                width: 120px;
-                height: 120px;
-            }
-        }
-
-    </style>
+    <!-- External CSS File -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 
-
 <body>
-
-
-    <!-- HEADER -->
 
     <header id="home">
 
@@ -254,17 +26,51 @@
     </header>
 
 
-    <!-- NAVIGATION -->
+    <!-- RESPONSIVE NAVIGATION MENU -->
 
     <nav>
 
-        <a href="#home">Home</a>
+        <ul class="nav-menu">
 
-        <a href="#about">About Me</a>
+            <li>
+                <a href="#home">Home</a>
+            </li>
 
-        <a href="#skills">Skills</a>
+            <li>
+                <a href="#about">About Me</a>
+            </li>
 
-        <a href="#goals">Goals</a>
+            <li class="dropdown">
+
+                <a href="#skills">Skills ▼</a>
+
+                <ul class="dropdown-menu">
+
+                    <li>
+                        <a href="#programming">Programming</a>
+                    </li>
+
+                    <li>
+                        <a href="#web">Web Development</a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+
+            <li>
+                <a href="#goals">Goals</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
+        </ul>
 
     </nav>
 
@@ -275,46 +81,20 @@
 
         <h2>Welcome</h2>
 
-        <p class="intro">
+        <p>
             Welcome to my personal website. This website introduces
-            who I am, my interests, my computer skills, and my future
+            who I am, my computer skills, projects, and my future
             goals in information technology.
         </p>
 
     </section>
 
 
-    <!-- SHORT BIO -->
+    <!-- ABOUT -->
 
     <section id="about">
 
         <h2>About Me</h2>
-
-
-        <!-- GRAPHIC -->
-
-        <div class="computer-graphic">
-
-            <div class="monitor">
-
-                &lt;Hello World!&gt;
-
-                <br><br>
-
-                Mohammed Awuf
-
-                <br>
-
-                CIS Student
-
-            </div>
-
-            <div class="stand"></div>
-
-            <div class="base"></div>
-
-        </div>
-
 
         <p>
             My name is Mohammed Awuf. I am a Computer Information
@@ -335,24 +115,60 @@
 
         <p>
             I am continuing to develop my computer and technology
-            skills. Some areas I have experience with include:
+            skills.
         </p>
 
         <div class="skills">
 
-            <div class="skill">HTML</div>
-
-            <div class="skill">CSS</div>
-
-            <div class="skill">JavaScript</div>
-
-            <div class="skill">Python</div>
-
-            <div class="skill">Linux</div>
-
-            <div class="skill">Computer Systems</div>
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">Python</span>
+            <span class="skill">Linux</span>
+            <span class="skill">Computer Systems</span>
 
         </div>
+
+    </section>
+
+
+    <section id="programming">
+
+        <h2>Programming</h2>
+
+        <p>
+            I have experience learning Python and JavaScript.
+            I use programming to practice problem solving and
+            understand how computer programs work.
+        </p>
+
+    </section>
+
+
+    <section id="web">
+
+        <h2>Web Development</h2>
+
+        <p>
+            I have experience working with HTML, CSS, and JavaScript.
+            I am learning how to create organized, responsive, and
+            interactive websites.
+        </p>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+
+    <section id="projects">
+
+        <h2>My Projects</h2>
+
+        <p>
+            My projects include websites and programming assignments
+            created while studying Computer Information Systems.
+            I will continue adding new projects as I develop my skills.
+        </p>
 
     </section>
 
@@ -364,11 +180,24 @@
         <h2>My Goals</h2>
 
         <p>
-            My goal is to continue improving my computer and
-            programming skills. I want to learn more about web
-            development, computer systems, programming, and
-            information technology. I hope to use these skills
-            to build a successful career in the technology field.
+            My goal is to continue improving my programming,
+            web development, and computer skills. I hope to use
+            these skills to build a successful career in information
+            technology.
+        </p>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+        <h2>Contact</h2>
+
+        <p>
+            Thank you for visiting my website. You can view my
+            projects and follow my progress through this website.
         </p>
 
     </section>
@@ -379,15 +208,7 @@
     <footer>
 
         <p>
-
-            <a href="#home">Home</a>
-
-            <a href="#about">About</a>
-
-            <a href="#skills">Skills</a>
-
-            <a href="#goals">Goals</a>
-
+            <a href="#home">Back to Top</a>
         </p>
 
         <p>
@@ -395,27 +216,6 @@
         </p>
 
     </footer>
-
-
-    <!-- CUSTOM CURSOR -->
-
-    <div class="custom-cursor"></div>
-
-
-    <script>
-
-        const cursor = document.querySelector(".custom-cursor");
-
-        document.addEventListener("mousemove", function(event) {
-
-            cursor.style.left = event.clientX + "px";
-
-            cursor.style.top = event.clientY + "px";
-
-        });
-
-    </script>
-
 
 </body>
 
